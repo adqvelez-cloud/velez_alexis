@@ -1,13 +1,10 @@
-FROM node:22-alpine
+FROM nginx:alpine
 
-WORKDIR /app
+COPY index.html /usr/share/nginx/html/index.html
+COPY index.js /usr/share/nginx/html/index.js
+COPY index.test.js /usr/share/nginx/html/index.test.js
+COPY package.json /usr/share/nginx/html/package.json
 
-COPY package*.json ./
+EXPOSE 80
 
-RUN npm ci --only=production
-
-COPY . .
-
-EXPOSE 3000
-
-CMD ["node", "index.js"]
+CMD ["nginx", "-g", "daemon off;"]

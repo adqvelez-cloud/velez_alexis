@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Node.js - Alexis Velez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .code-block {
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Proyecto Node.js Básico</h1>
+        <p><strong>Autor:</strong> Alexis Velez</p>
+        <p><strong>Repositorio:</strong> velez_alexis</p>
+
+        <h2>📋 Descripción</h2>
+        <p>Este proyecto incluye:</p>
+        <ul>
+            <li>✅ Proyecto Node.js básico con Jest</li>
+            <li>✅ Dos pruebas unitarias</li>
+            <li>✅ Workflow de GitHub Actions CI</li>
+            <li>✅ Dockerfile con Nginx</li>
+        </ul>
+
+        <h2>🔧 Funciones Implementadas</h2>
+        <div class="code-block">
+function sum(a, b) {
+  return a + b; // Función básica de suma
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+module.exports = { sum, multiply };
+        </div>
+
+        <h2>🧪 Pruebas</h2>
+        <div class="code-block">
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
+});
+
+test('multiplies 2 * 3 to equal 6', () => {
+  expect(multiply(2, 3)).toBe(6);
+});
+        </div>
+
+        <h2>📊 Estado del Workflow</h2>
+        <p class="success">✅ Todas las pruebas pasan correctamente</p>
+        <p class="success">✅ Workflow CI configurado para ramas main y velez</p>
+        <p class="success">✅ Contenedor Docker listo para usar</p>
+
+        <h2>🐳 Docker</h2>
+        <p>Para ejecutar el contenedor:</p>
+        <div class="code-block">
+docker build -t examen-parcial .
+docker run -p 8080:80 examen-parcial
+        </div>
+        <p>Luego visita: <a href="http://localhost:8080">http://localhost:8080</a></p>
+    </div>
+</body>
+</html>
